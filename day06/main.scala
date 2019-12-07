@@ -51,7 +51,7 @@ object Day06 {
       .map(_.trim)
       .filter(_ != "")
       .map(_.split("\\)"))
-      .map { case Array(f1,f2) => (f1,f2)}
+      .map { case Array(f1,f2) => (f1,f2) }
 
     val graph: Map[String, Array[String]] = edges.groupBy(_._2)
       .map { case (k, v) => k -> v.map(_._1) }
